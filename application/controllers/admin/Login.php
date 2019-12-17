@@ -10,6 +10,8 @@ class Login extends CI_Controller {
 		$this->load->library('form_validation');
 
 		$this->load->model('Login_Model');
+
+		$this->load->library('session');
 	}
 
 	public function index()
@@ -28,7 +30,9 @@ class Login extends CI_Controller {
 
 			if(password_verify($password, $user['password']))
 			{
-				//dung
+				$this->session->set_userdata(LOGIN, $user);
+
+				redirect('admin/dashboard');
 			}else{
 				echo '<script>alert("Tên đăng nhập hoặc mật khẩu không đúng!")</script>';
 			}
