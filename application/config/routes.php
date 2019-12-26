@@ -49,8 +49,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
 $route['404_override'] = '';
+$route['default_controller'] = 'frontend/home/index';
+$route['home'] = 'frontend/home';
+$route['admin'] = 'admin/dashboard/index';
 $route['admin/login'] = 'admin/login/index';
 $route['admin/dashboard'] = 'admin/dashboard/index';
 $route['admin/csgo_config_flies/delete/(:num)'] = 'admin/dashboard/delete_file/$1';
+$route['admin/csgo_config_flies/save'] = 'admin/dashboard/save_file';

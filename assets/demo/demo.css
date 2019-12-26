@@ -59,3 +59,21 @@
   height: calc(100vh - 70px);
   margin-top: 70px;
 }
+.btn-upload-file {
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 25px;
+}
+#frm_upload_file {
+  display: none;
+}
+.confirm-div{
+  display: none;
+  color: #fff;
+  background-color: #007E33;
+  height: 40px;
+  line-height: 40px;
+}
+.confirm-div.error{
+  background-color: #CC0000 !important;
+}

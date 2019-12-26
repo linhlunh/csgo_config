@@ -31,5 +31,14 @@ class Csgo_Config_Flies_Model extends CI_Model
         $this->db->update('csgo_config_flies', array('deleted' => DELETED));
         return $this->db->affected_rows();
     }
+
+    function save_file($file)
+    {
+        $this->db->insert('csgo_config_flies', $file);
+
+        $insert_id = $this->db->insert_id();
+
+        return $insert_id;
+    }
 }
 ?>
